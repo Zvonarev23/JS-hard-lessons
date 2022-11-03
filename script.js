@@ -94,3 +94,26 @@ let namePerson = "Александр";
 
 namePerson === "Артем" ? console.log("Директор") : namePerson === "Александр" ? console.log("Преподаватель") : console.log("Студент");  
 
+
+// Задание 3
+
+let message = "Какая-то подстава с underfined";
+
+let getString = function(str) {
+  if (typeof str === 'string' && str.length <= 30) {
+    return str.trim()
+
+  } else if (str.length > 30) {
+    return str.trim().substring(0, 29) + "..."
+
+  } else {
+    console.log("Тип аргумента не строка") 
+  }
+}
+
+console.log(getString(message));
+
+
+
+
+
