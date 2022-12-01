@@ -149,5 +149,35 @@ for (let i = 2; i <= n; i++) { // Для всех i...
 }
 
 
+// Сложная домашка 6
+
+let week = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье']
+let element = document.getElementById('week');
+let data = new Date();
+let todayIndex = (6 + data.getDay()) % 7;
+
+let showDaysOnScreen = function () {
+    week.forEach(function (item, i) {
+        let newDiv = document.createElement('div');
+        element.append(newDiv);
+    
+        if (i === todayIndex) {
+            newDiv.style.fontWeight = 'bold'
+            newDiv.textContent = week[i];
+        }
+    
+        if (
+            item == 'Суббота' 
+            || item == 'Воскресенье'
+        ) {
+            newDiv.style.fontStyle = 'italic';
+            newDiv.textContent = week[i];
+        } else {
+            newDiv.textContent = week[i];
+        }
+    });
+}
+
+showDaysOnScreen()
 
 
